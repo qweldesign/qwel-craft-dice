@@ -1,8 +1,12 @@
-# QWEL CREATIVE TEMPLATE
+# ダイスの回転シミュレーター | Dice Roll Simulator
 
-[QWEL.DESIGN](https://qwel.design/) の作品集 Creative Crafts のためのテンプレート
+4方向のボタンを押すと、ダイスがその方向に転がって出目を示す  
+canvasを使った2Dの描画なので、回転アニメーションまでは実装できず...  
+それから、できれば立方体を角丸にしてあげたかった...  
 
-[https://qwel.design/creative/](https://qwel.design/creative/)
+[https://qwel.design/creative/dice/](https://qwel.design/creative/dice/)
+
+---
 
 ---
 

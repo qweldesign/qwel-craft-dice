@@ -3,11 +3,55 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Title Here] | QWEL in Action</title>
+    <title>Dice Roll Simulator | QWEL in Action</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Noto+Sans:wght@100..900&family=Noto+Serif:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
+    <style>
+      #dice {
+        width: 100%;
+        margin: 3rem 0;
+        background-color: #000;
+      }
+      .controle {
+        list-style: none;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        width: 18rem;
+        margin: 0 auto;
+        padding: 0;
+      }
+      .controle__left, .controle__right,
+      .controle__backward, .controle__forward {
+        display: block;
+        flex: 0 0 40%;
+        height: 2.25rem;
+        text-align: center;
+        line-height: 2.25rem;
+      }
+      .controle__left a {
+        display: block;
+        background-color: #209fdf;
+        color: #fff;
+      }
+      .controle__right a {
+        display: block;
+        background-color: #79c6ec;
+        color: #fff;
+      }
+      .controle__backward a {
+        display: block;
+        background-color: #ffc080;
+        color: #fff;
+      }
+      .controle__forward a {
+        display: block;
+        background-color: #99cc33;
+        color: #fff;
+      }
+    </style>
   </head>
   <body>
     <header class="header">
@@ -15,17 +59,23 @@
       <ul class="breadcrumb">
         <li class="breadcrumb__item"><a href="https://qwel.design/">QWEL in Action</a></li>
         <li class="breadcrumb__item"><a href="../">Creative Crafts</a></li>
-        <li class="breadcrumb__item breadcrumb__item--current"><span>[Title Here]</span></li>
+        <li class="breadcrumb__item breadcrumb__item--current"><span>Dice Roll Simulator</span></li>
       </ul>
     </header>
     <main class="main">
-      <h2 class="main__title">[Title Here] | Created by <span> ― QWEL.DESIGN</span></h2>
+      <h2 class="main__title">Dice Roll Simulator | Created by <span> ― QWEL.DESIGN</span></h2>
       <ul class="main__list">
-        <li class="main__listItem--spec">[Spec Here]</li>
+        <li class="main__listItem--spec">4方向のボタンを押すと、ダイスがその方向に転がって出目を示す</li>
+        <li class="main__listItem--spec">canvasを使った2Dの描画なので、回転アニメーションまでは実装できず...</li>
+        <li class="main__listItem--spec">それから、できれば立方体を角丸にしてあげたかった...</li>
       </ul>
-      
-
-
+      <ul class="controle">
+        <li class="controle__left"><a href="#" data-role="roll">Left</a></li>
+        <li class="controle__backward"><a href="#" data-role="roll">Backward</a></li>
+        <li class="controle__forward"><a href="#" data-role="roll">Forward</a></li>
+        <li class="controle__right"><a href="#" data-role="roll">Right</a></li>
+      </ul>
+      <canvas id="dice" width="720" height="540"></canvas>
     </main>
     <footer id="footer" class="footer">
       <div class="footer__inner">
@@ -45,5 +95,6 @@
       </div>
     </footer>
     <script src="./init.js"></script>
+    <script src="./dice.js"></script>
   </body>
 </html>
